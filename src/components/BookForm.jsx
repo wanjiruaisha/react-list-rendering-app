@@ -53,11 +53,16 @@ function BookForm({ onAddBook }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mb-6 rounded-3xl bg-white p-6 shadow-md"
+      className="mb-6 rounded-3xl border border-white/70 bg-white/85 p-6 shadow-lg backdrop-blur"
     >
-      <h2 className="mb-5 text-2xl font-bold text-slate-900">
-        Add a New Book
-      </h2>
+      <div className="mb-5">
+        <p className="text-sm font-bold uppercase tracking-[0.2em] text-purple-500">
+          Add Collection
+        </p>
+        <h2 className="text-2xl font-extrabold text-slate-900">
+          Add a New Book
+        </h2>
+      </div>
 
       <div className="grid gap-4 md:grid-cols-2">
         <input
@@ -66,7 +71,7 @@ function BookForm({ onAddBook }) {
           placeholder="Book title"
           value={formData.title}
           onChange={handleChange}
-          className="rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-800"
+          className="rounded-2xl border border-purple-100 bg-purple-50/60 px-4 py-3 outline-none transition focus:border-purple-500 focus:bg-white"
         />
 
         <input
@@ -75,7 +80,7 @@ function BookForm({ onAddBook }) {
           placeholder="Author"
           value={formData.author}
           onChange={handleChange}
-          className="rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-800"
+          className="rounded-2xl border border-pink-100 bg-pink-50/60 px-4 py-3 outline-none transition focus:border-pink-500 focus:bg-white"
         />
 
         <input
@@ -84,7 +89,7 @@ function BookForm({ onAddBook }) {
           placeholder="Genre"
           value={formData.genre}
           onChange={handleChange}
-          className="rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-800"
+          className="rounded-2xl border border-indigo-100 bg-indigo-50/60 px-4 py-3 outline-none transition focus:border-indigo-500 focus:bg-white"
         />
 
         <input
@@ -93,14 +98,14 @@ function BookForm({ onAddBook }) {
           placeholder="Year"
           value={formData.year}
           onChange={handleChange}
-          className="rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-800"
+          className="rounded-2xl border border-cyan-100 bg-cyan-50/60 px-4 py-3 outline-none transition focus:border-cyan-500 focus:bg-white"
         />
 
         <select
           name="rating"
           value={formData.rating}
           onChange={handleChange}
-          className="rounded-xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-800 md:col-span-2"
+          className="rounded-2xl border border-amber-100 bg-amber-50/60 px-4 py-3 outline-none transition focus:border-amber-500 focus:bg-white md:col-span-2"
         >
           <option value="5">5 Stars</option>
           <option value="4">4 Stars</option>
@@ -112,7 +117,7 @@ function BookForm({ onAddBook }) {
 
       <button
         type="submit"
-        className="mt-5 rounded-xl bg-slate-900 px-6 py-3 font-bold text-white transition hover:bg-slate-700"
+        className="mt-5 rounded-2xl bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 px-6 py-3 font-bold text-white shadow-lg transition hover:scale-[1.02] hover:shadow-xl"
       >
         Add Book
       </button>
